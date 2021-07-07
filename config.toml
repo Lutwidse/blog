@@ -4,18 +4,32 @@ title = "水の飲み方を忘れないための備忘録"
 theme = "m10c"
 paginate = 8
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
 [menu]
   [[menu.main]]
     identifier = "home"
     name = "Home"
     url = "/"
     weight = 1
+  [[menu.main]]
+    identifier = "categories"
+    name = "記事一覧(カテゴリ)"
+    url = "/categories"
+    weight = 2
+  [[menu.main]]
+    identifier = "tags"
+    name = "記事一覧(タグ)"
+    url = "/tags"
+    weight = 3
 
 [params]
   author = "Lutwidse"
   description = "メモ帳として使う予定"
   avatar = "/site/avatar.png"
-  menu_item_separator = " - "
+  menu_item_separator = " <br> "
   [[params.social]]
     icon = "github"
     name = "GitHub"
