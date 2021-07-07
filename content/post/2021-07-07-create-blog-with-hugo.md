@@ -2,8 +2,8 @@
 title: "HugoとGitHub Pagesでブログを作成した話"
 date: 2021-07-07T13:58:40+09:00
 draft: false
-category: プログラミング
-tag: ["Hugo", "GitHub"]
+categories: [プログラミング]
+tags: ["Hugo", "GitHub"]
 ---
 
 ### Q. Web 系の知識なしでブログを作るには
@@ -110,7 +110,7 @@ paginate = 8
 では、サーバーを立ち上げてみましょう。
 
 ```cmd
-$ hugo server -dW
+$ hugo server -d
 ```
 
 ブラウザで[127.0.0.1:1313](http://127.0.0.1:1313)に接続するとサイトが表示されます。  
