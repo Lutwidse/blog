@@ -28,7 +28,7 @@ paginate = 8
 [params]
   author = "Lutwidse"
   description = "メモ帳として使う予定"
-  avatar = "/site/avatar.png"
+  avatar = "/site/avatar.webp"
   menu_item_separator = " <br> "
   [[params.social]]
     icon = "github"
