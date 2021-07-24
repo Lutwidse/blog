@@ -29,7 +29,9 @@ paginate = 8
   author = "Lutwidse"
   description = "メモ帳として使う予定"
   avatar = "/site/avatar.webp"
+  favicon = "/site/favicon.ico"
   menu_item_separator = " <br> "
+  images = ["/site/avatar.webp"]
   [[params.social]]
     icon = "github"
     name = "GitHub"
