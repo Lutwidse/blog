@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 水の飲み方を忘れないための備忘録</title>
+    <link>https://lutwidse.github.io/tags/</link>
+    <description>Recent content in Tags on 水の飲み方を忘れないための備忘録</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 07 Jul 2021 13:58:40 +0900</lastBuildDate><atom:link href="https://lutwidse.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub</title>
+      <link>https://lutwidse.github.io/tags/github/</link>
+      <pubDate>Wed, 07 Jul 2021 13:58:40 +0900</pubDate>
+      
+      <guid>https://lutwidse.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://lutwidse.github.io/tags/hugo/</link>
+      <pubDate>Wed, 07 Jul 2021 13:58:40 +0900</pubDate>
+      
+      <guid>https://lutwidse.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

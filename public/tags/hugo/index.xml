@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on 水の飲み方を忘れないための備忘録</title>
+    <link>https://lutwidse.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on 水の飲み方を忘れないための備忘録</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 07 Jul 2021 13:58:40 +0900</lastBuildDate><atom:link href="https://lutwidse.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HugoとGitHub Pagesでブログを作成した話</title>
+      <link>https://lutwidse.github.io/post/2021-07-07-create-blog-with-hugo/</link>
+      <pubDate>Wed, 07 Jul 2021 13:58:40 +0900</pubDate>
+      
+      <guid>https://lutwidse.github.io/post/2021-07-07-create-blog-with-hugo/</guid>
+      <description>Q. Web 系の知識なしでブログを作るには WordPress ってなに！！！助けて！！
+不安にかられているそこの貴方
+そんな非 Web 系エンジニアでも
+ 絶対 100% 完全放置 不労所得を生み出す  ブログを簡単に展開することができます。
+世の中そんなに甘い話はないので頑張りましょう。
+Hugo とは？ 最近話題の静的サイトジェネレーター
+テンプレートを選ぶと簡単にサイトが構築できるぞ ♨
+GitHub Pages とは？ レポジトリからサイトを公開できる静的なホスティングサービス。
+カスタムドメインも使える優れもの。
+もう待ちきれないよ！早く教えてくれ！ まずは Hugo を用意するところから。
+筆者の環境は Windows なので Chocolately を使っています。
+他環境の方は別途でインストール方法を参照してください。
+コマンドプロンプトを管理者権限で実行したら下記のコマンドを入力します。
+$ choco install hugo -confirm $ choco install hugo-extended -confirm hugo-extended は scss 対応版になります。
+よく分からない場合は両方入れましょう。
+そしたら適当なディレクトリで
+$ hugo new site blog (自分が分かりやすいものでOK) $ cd blog $ git init themes.gohugo.io 自分はm10cというテーマを選びました。 $ git submodule add https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

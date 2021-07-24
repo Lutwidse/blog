@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ja-jp">
+  <head>
+    <title>HugoとGitHub Pagesでブログを作成した話 // 水の飲み方を忘れないための備忘録</title>
+    <link rel="shortcut icon" href="/site/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.85.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Lutwidse" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://lutwidse.github.io/css/main.min.3d0c7d558c69bcb198ee0146cc509aab5387759a3757bbee75faa7c1c288e1b2.css" />
+
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://lutwidse.github.io/site/avatar.webp"/>
+
+<meta name="twitter:title" content="HugoとGitHub Pagesでブログを作成した話"/>
+<meta name="twitter:description" content="Q. Web 系の知識なしでブログを作るには WordPress ってなに！！！助けて！！
+不安にかられているそこの貴方
+そんな非 Web 系エンジニアでも
+ 絶対 100% 完全放置 不労所得を生み出す  ブログを簡単に展開することができます。
+世の中そんなに甘い話はないので頑張りましょう。
+Hugo とは？ 最近話題の静的サイトジェネレーター
+テンプレートを選ぶと簡単にサイトが構築できるぞ ♨
+GitHub Pages とは？ レポジトリからサイトを公開できる静的なホスティングサービス。
+カスタムドメインも使える優れもの。
+もう待ちきれないよ！早く教えてくれ！ まずは Hugo を用意するところから。
+筆者の環境は Windows なので Chocolately を使っています。
+他環境の方は別途でインストール方法を参照してください。
+コマンドプロンプトを管理者権限で実行したら下記のコマンドを入力します。
+$ choco install hugo -confirm $ choco install hugo-extended -confirm hugo-extended は scss 対応版になります。
+よく分からない場合は両方入れましょう。
+そしたら適当なディレクトリで
+$ hugo new site blog (自分が分かりやすいものでOK) $ cd blog $ git init themes.gohugo.io 自分はm10cというテーマを選びました。 $ git submodule add https://github."/>
+
+    <meta property="og:title" content="HugoとGitHub Pagesでブログを作成した話" />
+<meta property="og:description" content="Q. Web 系の知識なしでブログを作るには WordPress ってなに！！！助けて！！
+不安にかられているそこの貴方
+そんな非 Web 系エンジニアでも
+ 絶対 100% 完全放置 不労所得を生み出す  ブログを簡単に展開することができます。
+世の中そんなに甘い話はないので頑張りましょう。
+Hugo とは？ 最近話題の静的サイトジェネレーター
+テンプレートを選ぶと簡単にサイトが構築できるぞ ♨
+GitHub Pages とは？ レポジトリからサイトを公開できる静的なホスティングサービス。
+カスタムドメインも使える優れもの。
+もう待ちきれないよ！早く教えてくれ！ まずは Hugo を用意するところから。
+筆者の環境は Windows なので Chocolately を使っています。
+他環境の方は別途でインストール方法を参照してください。
+コマンドプロンプトを管理者権限で実行したら下記のコマンドを入力します。
+$ choco install hugo -confirm $ choco install hugo-extended -confirm hugo-extended は scss 対応版になります。
+よく分からない場合は両方入れましょう。
+そしたら適当なディレクトリで
+$ hugo new site blog (自分が分かりやすいものでOK) $ cd blog $ git init themes.gohugo.io 自分はm10cというテーマを選びました。 $ git submodule add https://github." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lutwidse.github.io/post/2021-07-07-create-blog-with-hugo/" /><meta property="og:image" content="https://lutwidse.github.io/site/avatar.webp"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-07-07T13:58:40+09:00" />
+<meta property="article:modified_time" content="2021-07-07T13:58:40+09:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://lutwidse.github.io"><img class="app-header-avatar" src="/site/avatar.webp" alt="Lutwidse" /></a>
+      
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             <br> 
+          
+          <a class="app-header-menu-item" href="/categories">記事一覧(カテゴリ)</a>
+             <br> 
+          
+          <a class="app-header-menu-item" href="/tags">記事一覧(タグ)</a>
+      </nav>
+      <p>メモ帳として使う予定</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/Lutwidse" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>GitHub</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com/Lutwidse0xff" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+      </div>
+      <div class = "app-footer-copyright">
+        <p>© Lutwidse All rights reserved.</p>
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">HugoとGitHub Pagesでブログを作成した話</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 7, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://lutwidse.github.io/tags/hugo/">Hugo</a>
+              <a class="tag" href="https://lutwidse.github.io/tags/github/">GitHub</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="q-web-系の知識なしでブログを作るには">Q. Web 系の知識なしでブログを作るには</h3>
+<p>WordPress ってなに！！！助けて！！</p>
+<p>不安にかられているそこの貴方<br>
+そんな非 Web 系エンジニアでも</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 絶対 100%</li>
+<li><input checked="" disabled="" type="checkbox"> 完全放置</li>
+<li><input checked="" disabled="" type="checkbox"> 不労所得を生み出す</li>
+</ul>
+<p>ブログを簡単に展開することができます。<br>
+<del>世の中そんなに甘い話はないので頑張りましょう。</del></p>
+<h3 id="hugo-とは">Hugo とは？</h3>
+<p>最近話題の静的サイトジェネレーター<br>
+テンプレートを選ぶと簡単にサイトが構築できるぞ ♨</p>
+<h3 id="github-pages-とは">GitHub Pages とは？</h3>
+<p>レポジトリからサイトを公開できる静的なホスティングサービス。<br>
+カスタムドメインも使える優れもの。</p>
+<h3 id="もう待ちきれないよ早く教えてくれ">もう待ちきれないよ！早く教えてくれ！</h3>
+<p>まずは Hugo を用意するところから。<br>
+筆者の環境は Windows なので Chocolately を使っています。<br>
+他環境の方は別途で<a href="https://gohugo.io/getting-started/installing">インストール方法</a>を参照してください。</p>
+<p>コマンドプロンプトを管理者権限で実行したら下記のコマンドを入力します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ choco install hugo -confirm
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ choco install hugo-extended -confirm
+</code></pre></div><p>hugo-extended は scss 対応版になります。<br>
+よく分からない場合は両方入れましょう。<br>
+そしたら適当なディレクトリで</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ hugo new site blog (自分が分かりやすいものでOK)
+$ cd blog
+$ git init
+
+themes.gohugo.io
+自分はm10cというテーマを選びました。
+$ git submodule add https://github.com/vaga/hugo-theme-m10c themes/m10c
+
+scssを編集するのであればforkした後にsubmoduleとして追加します。
+$ git submodule add https://github.com/Lutwidse/hugo-theme-m10c themes/m10c
+</code></pre></div><p>さて、ここまで来たらローカルでサーバーを立ち上げることが可能ですが、<br>
+その前に<a href="https://github.com/vaga/hugo-theme-m10c/tree/master/exampleSite">m10c のサンプル</a>を見ながら config.toml の設定を変えておきましょう。</p>
+<p>当サイトでは以下のようになっています。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://lutwidse.github.io&#34;</span>
+<span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;ja-jp&#34;</span>
+<span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;水の飲み方を忘れないための備忘録&#34;</span>
+<span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;m10c&#34;</span>
+<span style="color:#a6e22e">paginate</span> = <span style="color:#ae81ff">8</span>
+
+[<span style="color:#a6e22e">menu</span>]
+  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;home&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Home&#34;</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
+
+[<span style="color:#a6e22e">params</span>]
+  <span style="color:#a6e22e">author</span> = <span style="color:#e6db74">&#34;Lutwidse&#34;</span>
+  <span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#34;メモ帳として使う予定&#34;</span>
+  <span style="color:#75715e"># blog/static/に置くとよい。</span>
+  <span style="color:#a6e22e">avatar</span> = <span style="color:#e6db74">&#34;/site/avatar.png&#34;</span>
+  <span style="color:#a6e22e">menu_item_separator</span> = <span style="color:#e6db74">&#34; - &#34;</span>
+  [[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">social</span>]]
+    <span style="color:#a6e22e">icon</span> = <span style="color:#e6db74">&#34;github&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;GitHub&#34;</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://github.com/Lutwidse&#34;</span>
+  [[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">social</span>]]
+    <span style="color:#a6e22e">icon</span> = <span style="color:#e6db74">&#34;twitter&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Twitter&#34;</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://twitter.com/Lutwidse0xff&#34;</span>
+
+  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">style</span>]
+    <span style="color:#a6e22e">darkestColor</span> = <span style="color:#e6db74">&#34;#242930&#34;</span>
+    <span style="color:#a6e22e">darkColor</span> = <span style="color:#e6db74">&#34;#353b43&#34;</span>
+    <span style="color:#a6e22e">lightColor</span> = <span style="color:#e6db74">&#34;#afbac4&#34;</span>
+    <span style="color:#a6e22e">lightestColor</span> = <span style="color:#e6db74">&#34;#f5fffa&#34;</span>
+    <span style="color:#a6e22e">primaryColor</span> = <span style="color:#e6db74">&#34;#c2c4c6&#34;</span>
+    <span style="color:#75715e"># scssを編集したため追記。後ほど記載。</span>
+    <span style="color:#a6e22e">textColor</span> = <span style="color:#e6db74">&#34;#fffff0&#34;</span>
+</code></pre></div><p>では、サーバーを立ち上げてみましょう。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ hugo server -d
+</code></pre></div><p>ブラウザで<a href="http://127.0.0.1:1313">127.0.0.1:1313</a>に接続するとサイトが表示されます。<br>
+されない場合はエラーログと丸太を持って筆者の Twitter アカウントに DM で突撃してください。</p>
+<p>そしたら今度は記事を生成してみます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ hugo new post/HelloWorld.md
+</code></pre></div><p>blog/content/に置かれるので編集して、書き終わったら draft:false に変更。
+公開用の静的ページをビルドします。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ hugo
+</code></pre></div><p>blog/public/に出力されます。<br>
+Github Pages として公開するには public を push する必要がありますが、<br>
+管理がとても面倒になるのでサブモジュールとして追加しておきます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ git remote add origin https://github.com/Lutwidse/blog.git
+$ git submodule add -b main https://github.com/Lutwidse/lutwidse.github.io.git public
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ cd public
+$ git add .
+$ git commit -m <span style="color:#e6db74">&#34;initial commit&#34;</span>
+$ git push origin main
+</code></pre></div><p>これにてサイトの公開は完了です。<br>
+お疲れさまでした 😁👊</p>
+<h3 id="テーマで編集したところ">テーマで編集したところ</h3>
+<p>現時点で編集したところを書いておきます。<br>
+<a href="https://github.com/Lutwidse/hugo-theme-m10c">Lutwidse/hugo-theme-m10c</a></p>
+<h4 id="layouts_defaultbaseofhtml">layouts/_default/baseof.html</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!--冗長だったのでスッキリさせた--&gt;</span>
+&lt;<span style="color:#f92672">h1</span>&gt;{{ .Site.Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+<span style="color:#75715e">&lt;!-- &lt;h1&gt;{{ .Site.Title }}&lt;/h1&gt; --&gt;</span>
+...
+<span style="color:#75715e">&lt;!-- 一応の著作権表記 --&gt;</span>
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app-footer-copyright&#34;</span>&gt;
+  &lt;<span style="color:#f92672">p</span>&gt;© Lutwidse All rights reserved.&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h4 id="assetscss_extrascss">assets/css/_extra.scss</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="color:#a6e22e">.app-footer-copyright</span> {
+  <span style="color:#a6e22e">background</span><span style="color:#f92672">:</span> $darkest-color;
+  <span style="color:#a6e22e">text-align</span><span style="color:#f92672">:</span> center;
+  <span style="color:#a6e22e">bottom</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>;
+
+  <span style="color:#f92672">p</span> {
+    <span style="color:#a6e22e">margin</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span><span style="color:#ae81ff">.1</span><span style="color:#66d9ef">em</span>;
+  }
+
+  <span style="color:#75715e">// オーバーライド
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">h1</span><span style="color:#f92672">,</span>
+  <span style="color:#f92672">h2</span><span style="color:#f92672">,</span>
+  <span style="color:#f92672">h3</span><span style="color:#f92672">,</span>
+  <span style="color:#f92672">h4</span><span style="color:#f92672">,</span>
+  <span style="color:#f92672">h5</span><span style="color:#f92672">,</span>
+  <span style="color:#f92672">h6</span> {
+    <span style="color:#a6e22e">border-left-width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span><span style="color:#ae81ff">.2</span><span style="color:#66d9ef">em</span>;
+    <span style="color:#a6e22e">border-left-style</span><span style="color:#f92672">:</span> solid;
+    <span style="color:#a6e22e">border-left-color</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">#66daf6</span>;
+    <span style="color:#a6e22e">padding</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span><span style="color:#ae81ff">.5</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0</span><span style="color:#ae81ff">.5</span><span style="color:#66d9ef">em</span>;
+  }
+}
+
+<span style="color:#75715e">// オーバーライド
+</span><span style="color:#75715e"></span><span style="color:#f92672">body</span> {
+  <span style="color:#a6e22e">margin</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#a6e22e">font-family</span><span style="color:#f92672">:</span> sans-serif;
+  <span style="color:#a6e22e">background</span><span style="color:#f92672">:</span> $dark-color;
+  <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> $text-color;
+}
+</code></pre></div><h4 id="assetscssmainscss">assets/css/main.scss</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="color:#75715e">// 文字色追加
+</span><span style="color:#75715e"></span>$text-color<span style="color:#f92672">:</span> {{ <span style="color:#a6e22e">.Site.Params.style.textColor</span> <span style="color:#f92672">|</span> <span style="color:#f92672">default</span> <span style="color:#e6db74">&#34;#ffffff&#34;</span> }};
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
