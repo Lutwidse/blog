@@ -4,3 +4,4 @@
 [submodule "public"]
 	path = public
 	url = https://github.com/Lutwidse/lutwidse.github.io
+	ignore = dirty
