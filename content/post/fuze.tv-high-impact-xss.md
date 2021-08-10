@@ -161,20 +161,13 @@ CF-RAY: 676f32fc7f151d73-NRT
 /api/feed/foryou
 ```
 
-2.動画にスクリプトを投稿。被害拡大。
+2.動画にスクリプトを投稿させる。被害拡大。
 
 ```php
 /api/feed/comment/{commentTo}/{paramId}
 ```
 
-3.ユーザーが動画を投稿しているなら指定された日付が過ぎた後に動画を一斉削除。
-
-```php
-/api/feed/profile/me/recent/{itemId}/{direction}
-/api/feed/remove/{feedItemId}
-```
-
-4.コメント一覧に動画を投稿しているユーザーがいるなら  
+3.動画を投稿しているユーザーがコメント一覧にいるなら  
  グラフ探索で更に被害を拡大していく。
 
 ```php
@@ -182,7 +175,7 @@ CF-RAY: 676f32fc7f151d73-NRT
 /api/feed/comment/{commentTo}/{paramId}
 ```
 
-5.ユーザーが動画を投稿しているなら指定された日付が過ぎた後に動画を一斉削除。
+4.ユーザーが動画を投稿しているなら指定された日付が過ぎた後に動画を一斉削除。
 
 ```php
 /api/feed/profile/me/recent/{itemId}/{direction}
@@ -222,13 +215,13 @@ PoC[^3]
 /api/feed/foryou
 ```
 
-3.動画にスクリプトを投稿。被害拡大。
+3.動画にスクリプトを投稿させる。被害拡大。
 
 ```php
 /api/feed/comment/{commentTo}/{paramId}
 ```
 
-4.コメント一覧に動画を投稿しているユーザーがいるなら  
+4.動画を投稿しているユーザーがコメント一覧にいるなら  
  グラフ探索で更に被害を拡大していく。
 
 ```php
