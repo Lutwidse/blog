@@ -1,6 +1,6 @@
 [submodule "themes/m10c"]
 	path = themes/m10c
-	url = https://github.com/Lutwidse/hugo-theme-m10c.git
+	url = https://github.com/Lutwidse/hugo-theme-m10c
 [submodule "public"]
 	path = public
-	url = https://github.com/Lutwidse/lutwidse.github.io.git
+	url = https://github.com/Lutwidse/lutwidse.github.io
