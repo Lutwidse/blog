@@ -3,4 +3,4 @@
 	url = https://github.com/Lutwidse/hugo-theme-m10c
 [submodule "public"]
 	path = public
-	url = https://github.com/Lutwidse/lutwidse.github.io
+	url = https://github.com/Lutwidse/blog.lutwidse.github.io
